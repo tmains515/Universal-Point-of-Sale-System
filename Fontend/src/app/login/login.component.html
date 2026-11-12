@@ -1,0 +1,66 @@
+<mat-card class="login-card" appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>Sign In</mat-card-title>
+        <mat-card-subtitle>Welcome back to your dashboard</mat-card-subtitle>
+    </mat-card-header>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-card-content class="flex flex-col gap-2 pt-4">
+            @if (errorMessage()) {
+                <p class="login-error" role="alert">
+                    <mat-icon>error_outline</mat-icon>
+                    <span>{{ errorMessage() }}</span>
+                </p>
+            }
+
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <mat-icon matPrefix>person</mat-icon>
+                <input matInput formControlName="username" autocomplete="username" />
+                @if (form.controls.username.hasError('required')) {
+                    <mat-error>Username is required</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <mat-icon matPrefix>lock</mat-icon>
+                <input
+                    matInput
+                    formControlName="password"
+                    autocomplete="current-password"
+                    [type]="hidePassword() ? 'password' : 'text'"
+                />
+                <button
+                    mat-icon-button
+                    matSuffix
+                    type="button"
+                    (click)="togglePassword($event)"
+                    [attr.aria-label]="hidePassword() ? 'Show password' : 'Hide password'"
+                >
+                    <mat-icon>{{ hidePassword() ? 'visibility_off' : 'visibility' }}</mat-icon>
+                </button>
+                @if (form.controls.password.hasError('required')) {
+                    <mat-error>Password is required</mat-error>
+                } @else if (form.controls.password.hasError('minlength')) {
+                    <mat-error>Password must be at least 6 characters</mat-error>
+                }
+            </mat-form-field>
+
+            <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+        </mat-card-content>
+
+        <mat-card-actions class="flex gap-4 px-4 pb-4" align="end">
+            <button mat-stroked-button type="button" [disabled]="loading()" (click)="onSignUp()">
+                Sign Up
+            </button>
+            <button mat-flat-button type="submit" [disabled]="loading()">
+                @if (loading()) {
+                    <mat-spinner diameter="20" />
+                } @else {
+                    <span>Submit</span>
+                }
+            </button>
+        </mat-card-actions>
+    </form>
+</mat-card>

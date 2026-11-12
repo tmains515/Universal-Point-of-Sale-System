@@ -1,0 +1,154 @@
+# ---------------------------------------------------------------
+# Secrets & local configuration  (NEVER commit these)
+# ---------------------------------------------------------------
+*.env
+.env
+.env.*
+!.env.example
+!.env.template
+secrets.json
+appsettings.*.local.json
+appsettings.Local.json
+*.pfx
+*.p12
+*.key
+*.pem
+*.cer
+*.snk
+
+# ---------------------------------------------------------------
+# .NET build output
+# ---------------------------------------------------------------
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+build/
+bld/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+publish/
+PublishProfiles/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.binlog
+project.lock.json
+project.assets.json
+*.nuget.props
+*.nuget.targets
+*.nuget.dgspec.json
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+!packages/build/
+.nuget/
+
+# ---------------------------------------------------------------
+# Node / npm
+# ---------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+.yarn/cache
+.pnp.*
+
+# ---------------------------------------------------------------
+# Angular / frontend build output
+# ---------------------------------------------------------------
+dist/
+tmp/
+out-tsc/
+.angular/
+*.tsbuildinfo
+coverage/
+.sass-cache/
+
+# ---------------------------------------------------------------
+# JetBrains Rider / IntelliJ
+# ---------------------------------------------------------------
+.idea/
+*.sln.iml
+*.iml
+*.ipr
+*.iws
+*.DotSettings.user
+
+# ---------------------------------------------------------------
+# Visual Studio / VS Code
+# ---------------------------------------------------------------
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.VisualState.xml
+UpgradeLog*.htm
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# ---------------------------------------------------------------
+# Test results
+# ---------------------------------------------------------------
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+TestResults/
+
+# ---------------------------------------------------------------
+# Databases & local data
+# ---------------------------------------------------------------
+*.mdf
+*.ldf
+*.ndf
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# ---------------------------------------------------------------
+# OS cruft
+# ---------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*~
+*.swp
+*.swo
+
+# ---------------------------------------------------------------
+# Misc
+# ---------------------------------------------------------------
+*.log
+*.bak
+*.tmp
+*.orig
+*.rej
