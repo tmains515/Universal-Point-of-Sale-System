@@ -37,7 +37,7 @@ export class LoginComponent {
 
     form = this.fb.nonNullable.group({
         username: ['', Validators.required],
-        password: ['', [Validators.required, Validators.minLength(6)]],
+        password: ['', [Validators.required, Validators.minLength(4)]],
         rememberMe: [false],
     });
 
@@ -75,10 +75,5 @@ export class LoginComponent {
                     this.errorMessage.set(err.message);
                 },
             });
-    }
-
-
-    onSignUp() {
-        // TODO: navigate to sign-up route once it exists
     }
 }

@@ -1,0 +1,7 @@
+:host {
+	--mat-sidenav-container-background-color: var(--color-primary);
+	--mat-sidenav-container-text-color: var(--color-secondary);
+	--mat-fab-container-color: var(--color-accent);
+	--mat-fab-foreground-color: #ffffff;
+}
+

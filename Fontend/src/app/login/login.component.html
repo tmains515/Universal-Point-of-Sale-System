@@ -51,9 +51,6 @@
         </mat-card-content>
 
         <mat-card-actions class="flex gap-4 px-4 pb-4" align="end">
-            <button mat-stroked-button type="button" [disabled]="loading()" (click)="onSignUp()">
-                Sign Up
-            </button>
             <button mat-flat-button type="submit" [disabled]="loading()">
                 @if (loading()) {
                     <mat-spinner diameter="20" />

@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "tailwindcss";
+/* "important" marks every utility !important so Tailwind classes win against
+   Angular Material's unlayered component styles without a per-class `!`. */
+@import "tailwindcss" important;
 @theme {
     --color-primary: #151b2c;
     --color-secondary: #ace7ec;

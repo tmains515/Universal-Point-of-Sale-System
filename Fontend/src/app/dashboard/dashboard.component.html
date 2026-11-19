@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dashboard</title>
-</head>
-<header>
-    <div class="flex">
-        <app-button *ngFor="let store of dummyStoresData"> {{ store.name }}</app-button>
-    </div>
-</header>
-<body>
-    <div>
 
-    </div>
-</body>
-</html>
+<div class="dashboard">
+	<div class="dashboard__panel">
+		<mat-tab-group>
+			<mat-tab label="Stores">
+				<div class="content">
+					<add-card-component/>
+				</div>
+			</mat-tab>
+			<mat-tab label="Finance">Finance</mat-tab>
+			<mat-tab label="POS Configurations">Configs</mat-tab>
+			<mat-tab label="Inventory">Inventory</mat-tab>
+		</mat-tab-group>
+	</div>
+</div>
