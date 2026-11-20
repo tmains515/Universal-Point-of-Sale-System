@@ -8,11 +8,11 @@ namespace RestaurantDashboard.security.dbConfigs;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbContext<AppUser>(options)
 {
+    public DbSet<Store> Stores { get; set; }
+    public DbSet<Employee> Employees { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
         builder.HasDefaultSchema("rest_pos");
-        builder.Entity<Store>();
-        builder.Entity<Employee>();
     }
 }

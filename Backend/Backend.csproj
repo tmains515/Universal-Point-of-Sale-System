@@ -9,10 +9,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="dashboard\controller\" />
       <Folder Include="dashboard\domain\" />
       <Folder Include="dashboard\dto\" />
-      <Folder Include="dashboard\service\" />
     </ItemGroup>
 
     <ItemGroup>

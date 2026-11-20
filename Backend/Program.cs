@@ -4,6 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using RestaurantDashboard.security.dbConfigs;
 using RestaurantDashboard.security.user;
 using Npgsql;
+using RestaurantDashboard.dashboard.controller;
+using RestaurantDashboard.dashboard.repository;
+using RestaurantDashboard.dashboard.service;
+using RestaurantDashboard.security.user.domain;
 
 var builder = WebApplication.CreateBuilder(args);
 var csb = new NpgsqlConnectionStringBuilder(
@@ -28,6 +32,9 @@ builder.Services.AddIdentityApiEndpoints<AppUser>(o =>
 builder.Services.AddAuthorization();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped<DashboardController>();
+builder.Services.AddScoped<DashboardService>();
+builder.Services.AddScoped<DashboardRepository>();
 
 var app = builder.Build();
 
