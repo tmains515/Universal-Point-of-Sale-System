@@ -62,3 +62,25 @@ mat-tab-group {
 :host ::ng-deep .mat-mdc-tab-body-wrapper {
 	flex: 1;
 }
+
+
+.store_card{
+	--mat-card-outlined-container-color: color-mix(in srgb, var(--color-secondary) 4%, var(--color-primary));
+	--mat-card-outlined-outline-color: color-mix(in srgb, var(--color-secondary) 30%, transparent);
+	--mat-card-outlined-outline-width: 2px;
+	--mat-card-outlined-container-shape: 0.75rem;
+	--mat-card-title-text-size: 1rem;
+	--mat-card-title-text-weight: 500;
+
+	display: flex;
+	flex-direction: column;
+	/* Same footprint as <add-card-component>'s :host, so the grid stays even.
+	   flex: none stops the wrapping row from shrinking one and not the other. */
+	flex: none;
+	width: 15rem;
+	height: 11rem;
+	padding: 1rem;
+	border-style: solid;
+	cursor: pointer;
+	transition: transform 150ms ease, border-color 150ms ease, background-color 150ms ease;
+}

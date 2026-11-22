@@ -4,6 +4,13 @@
 		<mat-tab-group>
 			<mat-tab label="Stores">
 				<div class="content">
+					@for (store of stores(); track store.id){
+						<mat-card class="store_card" appearance="outlined">
+							<mat-card-content >
+								<mat-card-title> {{ store.storeName }} </mat-card-title>
+							</mat-card-content>
+						</mat-card>
+					}
 					<add-card-component/>
 				</div>
 			</mat-tab>
