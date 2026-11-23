@@ -11,9 +11,11 @@
     <ItemGroup>
       <Folder Include="dashboard\domain\" />
       <Folder Include="dashboard\dto\" />
+      <Folder Include="Migrations\" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="EFCore.NamingConventions" Version="10.0.1" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.14" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.14">
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

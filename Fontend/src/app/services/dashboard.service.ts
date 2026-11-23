@@ -11,6 +11,6 @@ export class DashboardService {
 	private readonly baseUrl = inject(BASE_URL);
 
 	getStores(): Observable<Store[]> {
-		return this.http.get<Store[]>(`${this.baseUrl}/stores`);
+		return this.http.get<Store[]>(`${this.baseUrl}/stores`, {withCredentials: true});
 	}
 }

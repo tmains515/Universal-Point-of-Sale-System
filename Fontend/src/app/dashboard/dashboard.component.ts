@@ -15,7 +15,6 @@ import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from '@angular/mat
 		MatTab,
 		AddCardComponent,
 		MatCardContent,
-		MatCardHeader,
 		MatCard,
 		MatCardTitle
 	],

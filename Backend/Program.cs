@@ -7,7 +7,6 @@ using Npgsql;
 using RestaurantDashboard.dashboard.controller;
 using RestaurantDashboard.dashboard.repository;
 using RestaurantDashboard.dashboard.service;
-using RestaurantDashboard.security.user.domain;
 
 var builder = WebApplication.CreateBuilder(args);
 var csb = new NpgsqlConnectionStringBuilder(
@@ -17,7 +16,7 @@ var csb = new NpgsqlConnectionStringBuilder(
     Password = Environment.GetEnvironmentVariable("PASSWORD")
 };
 
-builder.Services.AddDbContext<AppDbContext>(o => o.UseNpgsql(csb.ConnectionString));
+builder.Services.AddDbContext<AppDbContext>(o => o.UseNpgsql(csb.ConnectionString).UseSnakeCaseNamingConvention());
 
 builder.Services.AddIdentityApiEndpoints<AppUser>(o =>
     {

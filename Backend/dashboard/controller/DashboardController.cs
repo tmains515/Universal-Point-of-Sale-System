@@ -1,4 +1,5 @@
 
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using RestaurantDashboard.dashboard.service;
@@ -14,6 +15,7 @@ public class DashboardController(
     ) : ControllerBase
 {
     [HttpGet]
+    [Authorize]
     public async Task<IActionResult> GetUserStores()
     {
         var userId = userManager.GetUserId(User);
